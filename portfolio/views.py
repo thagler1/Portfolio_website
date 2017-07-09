@@ -4,11 +4,12 @@ from django.template import loader
 from .models import Profile, Contact
 import datetime
 from .forms import ContactForm
+from .utils.analytics import get_info
 # Create your views here.
 
 
 def index(request):
-
+    get_info(request)
     template = loader.get_template('index.html')
     profile= Profile.objects.get(id = 1)
     context = {}
@@ -19,6 +20,7 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 def recieve_contact(request):
+    get_info(request)
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
