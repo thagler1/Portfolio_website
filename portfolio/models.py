@@ -91,3 +91,7 @@ class Contact(models.Model):
     def __str__(self):
         return "%s %s"%(self.name, self.date)
 
+class Analytics(models.Model):
+    request_ip = models.CharField(max_length=10)
+    func = models.CharField(max_length=50)
+    date = models.DateTimeField()
