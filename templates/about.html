@@ -12,12 +12,13 @@
                     <p>{{ profile.about }}</p>
 
                 </div>
-
+                {%  if profile.resume %}
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download Theme
+                    <a href={{ profile.resume.url }} class="btn btn-lg btn-outline" download>
+                        <i class="fa fa-download"></i> Download Resume
                     </a>
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>
