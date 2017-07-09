@@ -4,7 +4,7 @@ from django.template import loader
 from .models import Profile, Contact
 import datetime
 from .forms import ContactForm
-from .utils.analytics import get_info
+from .site_utils.analytics import get_info
 # Create your views here.
 
 
