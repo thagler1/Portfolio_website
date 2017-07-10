@@ -95,3 +95,6 @@ class Analytics(models.Model):
     request_ip = models.CharField(max_length=10)
     func = models.CharField(max_length=50)
     date = models.DateTimeField()
+
+    def __str__(self):
+        return "%s - %s - %s"%(self.request_ip, self.func, self.date)
