@@ -14,7 +14,7 @@
                 </div>
                 {%  if profile.resume %}
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href={{ profile.resume.url }} class="btn btn-lg btn-outline" download>
+                    <a href={{ profile.resume.url }} class="btn btn-lg btn-outline" download="{{ profile.first_name }}_{{ profile.last_name }}_Resume">
                         <i class="fa fa-download"></i> Download Resume
                     </a>
                 </div>
