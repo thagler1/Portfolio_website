@@ -5,12 +5,11 @@ from .models import Profile, Contact
 import datetime
 from .forms import ContactForm
 from .site_utils.analytics import get_info
-from PersonalPortfolio import settings_secret
+
 # Create your views here.
 
 
 def index(request):
-    ga = settings_secret.GA
 
     get_info(request)
     template = loader.get_template('index.html')
@@ -19,7 +18,7 @@ def index(request):
     year = datetime.datetime.today().year
     context['profile'] = profile
     context['year'] = year
-    context['ga'] = ga
+
     profile.list_titles()
     return HttpResponse(template.render(context, request))
 
