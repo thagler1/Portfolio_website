@@ -66,6 +66,7 @@ class Project(models.Model):
     language = models.ManyToManyField('Language')
     icon = models.ImageField(upload_to=path_and_rename)
     link = models.URLField(null=True, blank=True)
+    website = models.URLField(null=True, blank=True)
 
     def list_languages(self):
         l = [title for title in self.language.all()]

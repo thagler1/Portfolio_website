@@ -35,6 +35,11 @@
                                     Repo:<strong><a href={{ project.link }}>GitHub</a></strong>
                                 </li>
                                 {% endif %}
+                                {% if project.website %}
+                                <li>
+                                    website:<strong><a href={{ project.website }}>Click here!</a></strong>
+                                </li>
+                                {% endif %}
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
